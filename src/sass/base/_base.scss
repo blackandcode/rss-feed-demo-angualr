@@ -1,0 +1,64 @@
+* {
+  @include box-sizing(border-box);
+  min-height: 0;
+  min-width: 0;
+  border: none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  &:focus{
+    outline:0;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.noscroll {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+body {
+  background-color: #fff;
+  color: #979797;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  @include transition(all .3s ease);
+  color: $primary-color;
+  &:hover {
+    color: lighten($primary-color, 5%);
+  }
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// to-do quick fix for kendo grid header
+.k-grid-header {
+  -webkit-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}

@@ -1,0 +1,9 @@
+[
+    "normalize-css/normalize.css",
+    "bootstrap/dist/css/bootstrap.min.css",
+    "kendo-ui/styles/kendo.common.min.css",
+    "kendo-ui/styles/kendo.default.min.css",
+    "pickadate/lib/themes/classic.css",
+    "pickadate/lib/themes/classic.date.css",
+    "pickadate/lib/themes/classic.time.css"
+]

@@ -1,0 +1,30 @@
+{
+  "name": "bild-angular-starter-kit",
+  "description": "BildStudio Angular starter kit",
+  "authors": [
+    "Bild Studio <support@bild-studio.com>"
+  ],
+  "license": "BSD",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.1.1",
+    "angular": "^1.6.0",
+    "kendo-ui": "^2016.3.1216",
+    "angular-ui-router": "^0.3.2",
+    "normalize-css": "^5.0.0",
+    "bootstrap": "^3.3.7",
+    "ngstorage": "^0.3.11",
+    "angular-sanitize": "^1.6.0",
+    "angular-schema-form": "^0.8.13",
+    "font-awesome": "^4.7.0",
+    "angular-schema-form-datepicker": "^1.4.1"
+  }
+}

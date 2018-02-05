@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card card-container">
+        <p id="profile-name" class="profile-name-card" ng-bind="vm.errorMessage"></p>
+        <div class="windows8" ng-show="vm.showLoader">
+            <div class="wBall" id="wBall_1">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_2">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_3">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_4">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_5">
+                <div class="wInnerBall"></div>
+            </div>
+        </div>
+
+        <div>
+            <form
+                autocomplete="off"
+                id="{{vm.formId}}"
+                name="{{vm.formId}}"
+                sf-schema="vm.schema"
+                sf-form="vm.form"
+                sf-model="vm.model"
+                sf-options="vm.sfOptions"
+                ng-submit="vm.onSubmit(loginForm)">
+            </form>
+        </div>
+    </div>
+</div>

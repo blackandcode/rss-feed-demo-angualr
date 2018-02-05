@@ -1,0 +1,11 @@
+[
+    "dist/fonts/font-awesome/css/font-awesome.css",
+    "dist/css/normalize.css",
+    "dist/css/bootstrap.min.css",
+    "dist/css/kendo.common.min.css",
+    "dist/css/kendo.default.min.css",
+    "dist/css/classic.css",
+    "dist/css/classic.date.css",
+    "dist/css/classic.time.css",
+    "dist/css/main.css"
+]

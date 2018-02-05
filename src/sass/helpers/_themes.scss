@@ -1,0 +1,126 @@
+// Blue Theme ///////////////////////////
+
+// backgrounds
+.blue-theme .header,
+.blue-theme .btn,
+.blue-theme .window-layout .window .window-header .window-actions > div.close:hover,
+.blue-theme .modal-container .modal-content .modal-header
+{
+  background: $blue;
+}
+
+// background hovers
+.blue-theme .btn:hover,
+.blue-theme .header .header-wrapper .breadcrumb > ul li:hover a,
+.blue-theme .header .header-wrapper .breadcrumb .overflow-breadcrumb .overflow-button:hover,
+.blue-theme .header .header-wrapper .breadcrumb .overflow-breadcrumb.collapsed .overflow-button,
+.blue-theme .header .header-wrapper .menu .dropdown .dropdown-button:hover,
+.blue-theme .header .header-wrapper .menu .dropdown.collapsed .dropdown-button,
+.blue-theme .header .header-wrapper .header-icons ul li a:hover
+{
+  background: lighten($blue, 5%);
+}
+
+// colors
+.blue-theme a,
+.blue-theme h1,
+.blue-theme h1,
+.blue-theme h3,
+.blue-theme h4,
+.blue-theme h5,
+.blue-theme h6,
+.blue-theme .access-wrapper .logo h1 span
+{
+  color: $blue;
+}
+
+// colors hovers
+.blue-theme a:hover
+{
+  color: lighten($blue, 5%);
+}
+
+.blue-theme .header .header-wrapper .logo h1 a {
+  color: darken($blue, 15%);
+}
+
+.blue-theme .access-wrapper .access-form .register a {
+  border-color:  $blue;
+}
+
+///////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Orange Theme ///////////////////////////
+
+// backgrounds
+.orange-theme .header,
+.orange-theme .btn,
+.orange-theme .window-layout .window .window-header .window-actions > div.close:hover,
+.orange-theme .modal-container .modal-content .modal-header
+{
+  background: $orange;
+}
+
+// background hovers
+.orange-theme .btn:hover,
+.orange-theme .header .header-wrapper .breadcrumb > ul li:hover a,
+.orange-theme .header .header-wrapper .breadcrumb .overflow-breadcrumb .overflow-button:hover,
+.orange-theme .header .header-wrapper .breadcrumb .overflow-breadcrumb.collapsed .overflow-button,
+.orange-theme .header .header-wrapper .menu .dropdown .dropdown-button:hover,
+.orange-theme .header .header-wrapper .menu .dropdown.collapsed .dropdown-button,
+.orange-theme .header .header-wrapper .header-icons ul li a:hover
+{
+  background: lighten($orange, 5%);
+}
+
+// colors
+.orange-theme a,
+.orange-theme h1,
+.orange-theme h1,
+.orange-theme h3,
+.orange-theme h4,
+.orange-theme h5,
+.orange-theme h6,
+.orange-theme .access-wrapper .logo h1 span
+{
+  color: $orange;
+}
+
+// colors hovers
+.orange-theme a:hover
+{
+  color: lighten($orange, 5%);
+}
+
+.orange-theme .header .header-wrapper .logo h1 a {
+  color: darken($orange, 15%);
+}
+
+.orange-theme .access-wrapper .access-form .register a {
+  border-color:  $orange;
+}
+
+///////////////////////////////////////////

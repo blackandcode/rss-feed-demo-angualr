@@ -1,0 +1,9 @@
+[
+  "src/js/app/app.js",
+  "dist/js/templates.js",
+  "src/js/app/**/*.module.js",
+  "src/js/app/**/*.config.js",
+  "src/js/app/**/*.service.js",
+  "src/js/app/**/*.directive.js",
+  "src/js/app/**/*.controller.js"
+]

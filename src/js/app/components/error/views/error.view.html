@@ -1,0 +1,32 @@
+<div class="error-page main-menu">
+    <div class="wrapper">
+
+        <div class="windows8" ng-show="vm.showLoader">
+            <div class="wBall" id="wBall_1">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_2">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_3">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_4">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_5">
+                <div class="wInnerBall"></div>
+            </div>
+        </div>
+
+        <div class="error-message">
+            <span ng-bind-html="vm.errorMessage"></span>
+        </div>
+
+        <div class="error-buttons">
+            <button class="btn btn-success" ng-click="vm.reload($event)" ng-disabled="vm.disableButton">Učitaj ponovo stranicu</button>
+            <button class="btn btn-success" ng-click="vm.backToLogin($event)" ng-disabled="vm.disableButton">Odjavi se</button>
+        </div>
+
+    </div>
+</div>
