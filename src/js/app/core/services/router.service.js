@@ -17,7 +17,7 @@
             }
 
             var currentUrl = window.location;
-            var apiUrl = "https://powerful-caverns-39064.herokuapp.com/"; // Dev domain
+            var apiUrl = "http://localhost:3000/"; // Dev domain
 
             // if (currentUrl.host === "agent.uniqa.me") {
                 // apiUrl = "https://powerful-caverns-39064.herokuapp.com/"; // Production domain
@@ -44,7 +44,7 @@
             }
 
             var currentUrl = window.location;
-            var apiUrl = "https://powerful-caverns-39064.herokuapp.com/"; // Dev domain
+            var apiUrl = "http://localhost:3000/"; // Dev domain
 
             // // if (currentUrl.host === "agent.uniqa.me") {
             //     apiUrl = "http://webshop-admin.uniqa.me/index.php/"; // Production domain
@@ -55,9 +55,9 @@
 
         function loginRoutes(key) {
             var routes = {
-                login:          "uniqaAgents/login",
-                getUserInfo:    "uniqaAgents/getUserInfo",
-                logout:         "uniqaAgents/logout"
+                login:          "/auth/login",
+                getUserInfo:    "getUserInfo",
+                logout:         "/auth/logout"
             };
 
             return getLoginUrl(routes[key]);

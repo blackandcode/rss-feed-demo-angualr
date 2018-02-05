@@ -66,11 +66,13 @@
                     method: "POST",
                     url: RouterService.loginRoutes("login"),
                     data: {
-                        name: vm.model.username,
-                        pass: vm.model.password
+                        username: vm.model.username,
+                        password: vm.model.password
                     }
                 }).then(
                     function (response) {
+
+
                         if (response.data.status === 1 && response.data.data.token) {
                             $localStorage.token = response.data.data.token;
                             app.userData = response.data.data;
