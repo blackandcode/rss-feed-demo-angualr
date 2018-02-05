@@ -10,7 +10,7 @@
     function config($stateProvider) {
         $stateProvider
             .state("login", {
-                url: "/auth/login",
+                url: "/login",
                 params: {
                     message: ""
                 },
