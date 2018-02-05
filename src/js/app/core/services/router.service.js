@@ -17,10 +17,10 @@
             }
 
             var currentUrl = window.location;
-            var apiUrl = "http://testera.netcoredev.bildhosting.me/api/services/app/"; // Dev domain
+            var apiUrl = "https://powerful-caverns-39064.herokuapp.com/"; // Dev domain
 
             // if (currentUrl.host === "agent.uniqa.me") {
-                apiUrl = "http://insurance-calculators-rest.uniqa.me/api/services/app/"; // Production domain
+                // apiUrl = "https://powerful-caverns-39064.herokuapp.com/"; // Production domain
             // }
 
             return apiUrl + url;
@@ -44,11 +44,11 @@
             }
 
             var currentUrl = window.location;
-            var apiUrl = "http://webshop-api-uniqa.local.bildhosting.me/index.php/"; // Dev domain
+            var apiUrl = "https://powerful-caverns-39064.herokuapp.com/"; // Dev domain
 
-            // if (currentUrl.host === "agent.uniqa.me") {
-                apiUrl = "http://webshop-admin.uniqa.me/index.php/"; // Production domain
-            // }
+            // // if (currentUrl.host === "agent.uniqa.me") {
+            //     apiUrl = "http://webshop-admin.uniqa.me/index.php/"; // Production domain
+            // // }
 
             return apiUrl + url;
         }
@@ -73,10 +73,10 @@
 
         function serverRoute() {
             var currentUrl = window.location;
-            var apiUrl = "http://testera.netcoredev.bildhosting.me/"; // Dev domain
+            var apiUrl = "https://powerful-caverns-39064.herokuapp.com/"; // Dev domain
 
             // if (currentUrl.host === "agent.uniqa.me") {
-                apiUrl = "http://insurance-calculators-rest.uniqa.me/"; // Production domain
+                // apiUrl = "https://powerful-caverns-39064.herokuapp.com/"; // Production domain
             // }
 
             return apiUrl;
