@@ -20,7 +20,6 @@ module.exports = function (grunt) {
         // jshint
         jshint: {
             app: ['src/js/app/**/*.js'],
-            api: ['src/js/api/**/*.js'],
             plugins: ['src/js/plugins/**/*.js'],
             options: {
                 notypeof: true,
@@ -53,10 +52,6 @@ module.exports = function (grunt) {
                 dest: 'dist/js/app.js'
             },
 
-            api: {
-                src: grunt.file.readJSON("config/src.api.json"),
-                dest: 'dist/js/api.js'
-            },
 
             plugins: {
                 src: grunt.file.readJSON("config/src.plugins.json"),
@@ -77,12 +72,6 @@ module.exports = function (grunt) {
             angular: {
                 files: {
                     'dist/js/app.min.js': ['<%= concat.angular.dest %>']
-                }
-            },
-
-            api: {
-                files: {
-                    'dist/js/api.min.js': ['<%= concat.api.dest %>']
                 }
             },
 
@@ -203,11 +192,6 @@ module.exports = function (grunt) {
             angularTemplates: {
                 files: ['src/js/app/**/*.html'],
                 tasks: ["ngtemplates"]
-            },
-
-            api: {
-                files: ['src/js/api/**/*.js'],
-                tasks: ['jshint:api', 'includeSource:dev', 'wiredep:dev']
             },
 
             plugins: {
