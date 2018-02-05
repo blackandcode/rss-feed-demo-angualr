@@ -1,15 +1,15 @@
 {
-  "name": "bild-angular-starter-kit",
-  "title": "BildStudio Angular starter kit",
+  "name": "danilo-puric-angular-starter-kit",
+  "title": "Danilo Puric Angular starter kit",
   "version": "0.0.1",
-  "description": "BildStudio Angular starter kit",
-  "url": "www.bild-studio.net",
-  "copyright": "BildStudio",
+  "description": "Danilo Puric Angular starter kit",
+  "url": "www.danilo-puric.net",
+  "copyright": "Danilo Puric",
   "main": "index.js",
   "scripts": {
     "start": "npm install && bower install && grunt start"
   },
-  "author": "Bild Studio",
+  "author": "Danilo Puric",
   "license": "BSD",
   "dependencies": {
     "grunt": "^1.0.1",
