@@ -19,6 +19,9 @@
 				});
 
 				var vm = this;
+
+
+				vm.moment = moment;
 				vm.feedTitle = $state.params.name;
 				vm.feeds = [];
 				var config = {

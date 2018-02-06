@@ -5,12 +5,12 @@
 				<h4>{{vm.feedTitle}}</h4>
 				<div class="panel panel-defaul" ng-repeat="feed in vm.feeds">
 					<div class="panel-body">
-						<span>{{feed.createdAt}}</span>
+						<span>{{vm.moment(feed.createdAt).format('MMMM Do YYYY, h:mm a')}}</span>
 						<h4><a ng-href="{{feed.url}}" target="_blank">{{feed.title}}</a></h4>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 </div>

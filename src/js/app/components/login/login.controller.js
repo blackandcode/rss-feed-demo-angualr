@@ -72,11 +72,11 @@
                 }).then(
                     function (response) {
 
-
                         if (response.data.status === 1 && response.data.data.token) {
-														$localStorage.token = response.data.data.token;
-														debugger;
+                            $localStorage.token = response.data.data.token;
+
                             app.userData = response.data.data;
+
                             $state.go(app.defaultStanje(app.userData));
                         } else if (response.data.status === 0 && response.data.message) {
                             vm.errorMessage = response.data.message;

@@ -1,12 +1,38 @@
-<div ui-view="content">
-	<button id="addFeed" ng-click="vm.changeMethod('POST')">Create New Feed</button>
-    <ul class="main-menu">
 
-        <li ng-repeat="feed in vm.feeds">
-					<a ng-click="vm.showEdit(feed)" href=""><span>{{feed.title}}</span></a>
-				</li>
-    </ul>
+<div ui-view="content">
+    <div class="wrapper">
+
+        <div class="row">
+
+            <div class="col-sm-3">
+                <div class="error-buttons">
+                    <button class="btn-success" id="addFeed" ng-click="vm.showEdit(null,'POST')">Create New Feed</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col-sm-8">
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="feed in vm.feeds"> {{feed.title}}
+                        <span class="badge badge-secondary" > <a style="color:#FFF" ng-click="vm.showEdit(feed, 'PUT')" href="">Edit</a></span>
+
+
+                        <span class="badge badge-danger" > <a style="color:#FFF" ng-click="vm.showEdit(feed, 'DELETE')" href="">Delete</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+
 </div>
+
 
 <div class="container modal" ng-show="vm.editVisible == true">
 	<div class="row">
@@ -22,8 +48,6 @@
 				sf-options="vm.sfOptions"
 				ng-submit="vm.onSubmit(loginForm)">
 			</form>
-			<button id="editFeed" ng-click="vm.changeMethod('PUT')">Edit</button>
-			<button id="removeFeed" ng-click="vm.changeMethod('DELETE')">Remove</button>
 		</div>
 	</div>
 </div>

@@ -53,7 +53,8 @@
 				vm.form = [
 					{
 						"key": "id",
-						"type": "text"
+						"type": "hidden",
+                        "notitle": true
 					},
 					{
 						"key": "title",
@@ -85,13 +86,19 @@
 					console.log(err);
 				});
 
-				vm.showEdit = function(feed) {
-					console.log(feed);
-					vm.editModel = {
-						id: feed._id,
-						title: feed.title,
-						url: feed.url
-					};
+				vm.showEdit = function(feed, method) {
+
+
+				    vm.method = method;
+
+					// console.log(feed);
+                    if (feed) {
+                        vm.editModel = {
+                            id: feed._id,
+                            title: feed.title,
+                            url: feed.url
+                        };
+                    }
 
 					vm.editVisible = true;
 					return;
