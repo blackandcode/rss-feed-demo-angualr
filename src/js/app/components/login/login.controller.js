@@ -74,7 +74,8 @@
 
 
                         if (response.data.status === 1 && response.data.data.token) {
-                            $localStorage.token = response.data.data.token;
+														$localStorage.token = response.data.data.token;
+														debugger;
                             app.userData = response.data.data;
                             $state.go(app.defaultStanje(app.userData));
                         } else if (response.data.status === 0 && response.data.message) {

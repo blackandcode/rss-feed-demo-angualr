@@ -10,7 +10,7 @@
     function config($stateProvider) {
         $stateProvider
             .state("app.feed-list", {
-                url: "/feed-list",
+                url: "/feed-list/:id?url",
                 parent: "app",
                 views: {
                     content: {
@@ -18,7 +18,18 @@
                         controllerAs: "vm",
                         templateUrl: "components/feed-list/feed-list.view.html"
                     }
-                },
+								},
+								params: {
+									id: {
+										squash: false
+									},
+									url: {
+										squash: false
+									},
+									name: {
+										squash: false
+									}
+								},
                 title: "Feed List",
                 breadcrumb: [
                     {

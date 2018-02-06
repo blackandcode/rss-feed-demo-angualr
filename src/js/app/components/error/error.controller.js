@@ -22,6 +22,7 @@
         }
 
         function backToLogin(event) {
+					debugger;
             vm.disableButton = true;
             delete $localStorage.token;
             app.userData = null;

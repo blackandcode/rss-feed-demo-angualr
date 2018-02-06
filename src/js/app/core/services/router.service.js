@@ -56,7 +56,7 @@
         function loginRoutes(key) {
             var routes = {
                 login:          "/auth/login",
-                getUserInfo:    "getUserInfo",
+                getUserInfo:    "/user",
                 logout:         "/auth/logout"
             };
 
@@ -73,7 +73,7 @@
 
         function serverRoute() {
             var currentUrl = window.location;
-            var apiUrl = "https://powerful-caverns-39064.herokuapp.com/"; // Dev domain
+            var apiUrl = "http://localhost:3000/"; // Dev domain
 
             // if (currentUrl.host === "agent.uniqa.me") {
                 // apiUrl = "https://powerful-caverns-39064.herokuapp.com/"; // Production domain

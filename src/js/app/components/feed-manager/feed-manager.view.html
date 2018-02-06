@@ -1,11 +1,29 @@
 <div ui-view="content">
+	<button id="addFeed" ng-click="vm.changeMethod('POST')">Create New Feed</button>
     <ul class="main-menu">
 
-        feed manager view
-        <!--<li ng-repeat="sekcija in vm.sekcije track by $index" ng-if="sekcija.imaPravoPristupa">-->
-            <!--<a ui-sref="{{sekcija.state}}">-->
-                <!--<span>{{sekcija.naziv}}</span>-->
-            <!--</a>-->
-        <!--</li>-->
+        <li ng-repeat="feed in vm.feeds">
+					<a ng-click="vm.showEdit(feed)" href=""><span>{{feed.title}}</span></a>
+				</li>
     </ul>
+</div>
+
+<div class="container modal" ng-show="vm.editVisible == true">
+	<div class="row">
+		<div class="col-lg-6">
+			<span class="fa fa-close close-modal" ng-click="vm.hideEdit()"></span>
+			<form
+				autocomplete="off"
+				id="{{vm.formId}}"
+				name="{{vm.formId}}"
+				sf-schema="vm.schema"
+				sf-form="vm.form"
+				sf-model="vm.editModel"
+				sf-options="vm.sfOptions"
+				ng-submit="vm.onSubmit(loginForm)">
+			</form>
+			<button id="editFeed" ng-click="vm.changeMethod('PUT')">Edit</button>
+			<button id="removeFeed" ng-click="vm.changeMethod('DELETE')">Remove</button>
+		</div>
+	</div>
 </div>

@@ -34,3 +34,36 @@
 @import "pages/ponude";
 @import "pages/dokumentacija";
 @import "pages/error";
+
+.container.modal {
+	display: block;
+	background-color: rgba(#000, .7);
+	width: 100%;
+	.col-lg-6 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	input[type="submit"] {
+		width: 160px;
+		margin-bottom: 1rem;
+	}
+
+	.close-modal {
+		color: white;
+		float: right;
+		font-size: 2rem;
+		position: relative;
+		z-index: 2000;
+		cursor: pointer;
+	}
+}
+#editFeed, #addFeed, #removeFeed {
+	padding: 1rem 2rem;
+	color: black;
+}
+
+#addFeed {
+	margin: 2rem auto 2rem auto;
+}

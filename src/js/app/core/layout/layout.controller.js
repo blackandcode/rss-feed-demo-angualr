@@ -5,9 +5,9 @@
         .module("app.core.layout")
         .controller("LayoutController", LayoutController);
 
-    LayoutController.$inject = ["$scope", "$state", "$localStorage", "$timeout", "$http", "RouterService", "app", "loadUserInfo"];
+    LayoutController.$inject = ["$scope", "$state", "$localStorage", "$timeout", "$http", "RouterService", "app", "loadUserInfo", "$rootScope"];
 
-    function LayoutController($scope, $state, $localStorage, $timeout, $http, RouterService, app, loadUserInfo) {
+    function LayoutController($scope, $state, $localStorage, $timeout, $http, RouterService, app, loadUserInfo, $rootScope) {
 
         if(!(loadUserInfo && loadUserInfo.status === true)) {
             $state.go("error", {message: "Došlo je do greške. Pokušajte ponovo da učitate stranicu ili da se odjavite pa ponovo prijavite."});
@@ -24,7 +24,53 @@
         vm.showLoader = false;
         vm.collapseSidebar = true;
         vm.collapseProfile = false;
-        vm.collapseBreadcrumb = false;
+				vm.collapseBreadcrumb = false;
+				vm.feeds = [];
+
+				$http.get('http://localhost:3000/user-feeds')
+				.then(function(feeds) {
+					console.log(feeds);
+					vm.feeds = feeds.data.feeds;
+					vm.feeds.forEach(function (feed) {
+						vm.sekcije.push({
+							id: feed._id ? feed._id : null,
+							naziv: feed.title,
+							state: "app.feed-list({id: '"+ feed._id + "', url: '" + feed.url + "', name: '" + feed.title + "'})",
+							ikonica: "fa fa-list",
+							imaPravoPristupa: app.userData.type.indexOf("Admin") !== -1
+						});
+					});
+				})
+				.catch(function(err) {
+					console.log(err);
+				});
+
+				$rootScope.$on('addedFeed', function(data) {
+					debugger;
+					vm.sekcije = vm.sekcije.filter(function(sekcija) {
+						if (!sekcija.id) return true;
+						return !sekcija.id;
+					});
+
+					$http.get('http://localhost:3000/user-feeds')
+					.then(function(feeds) {
+						console.log(feeds);
+						vm.feeds = feeds.data.feeds;
+						vm.feeds.forEach(function (feed) {
+							vm.sekcije.push({
+								id: feed._id ? feed._id : null,
+								naziv: feed.title,
+								state: "app.feed-list({id: '"+ feed._id + "', url: '" + feed.url + "', name: '" + feed.title + "'})",
+								ikonica: "fa fa-list",
+								imaPravoPristupa: app.userData.type.indexOf("Admin") !== -1
+							});
+						});
+					})
+					.catch(function(err) {
+						console.log(err);
+					});
+				});
+
         vm.sekcije = [
             {
                 naziv: "Feed List",
@@ -38,7 +84,9 @@
                 ikonica: "fa fa-list-alt",
                 imaPravoPristupa: app.userData.type.indexOf("Admin") !== -1
             }
-        ];
+				];
+				
+
         vm.toggleSidebar = toggleSidebar;
         vm.toggleProfile = toggleProfile;
         vm.toggleBreadcrumb = toggleBreadcrumb;

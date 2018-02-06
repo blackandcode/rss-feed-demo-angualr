@@ -1,5 +1,16 @@
 <div ui-view="content">
-    <ul class="main-menu">
-        feed list view
-    </ul>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h4>{{vm.feedTitle}}</h4>
+				<div class="panel panel-defaul" ng-repeat="feed in vm.feeds">
+					<div class="panel-body">
+						<span>{{feed.createdAt}}</span>
+						<h4><a ng-href="{{feed.url}}" target="_blank">{{feed.title}}</a></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 </div>

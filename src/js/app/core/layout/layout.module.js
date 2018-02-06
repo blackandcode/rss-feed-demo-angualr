@@ -25,7 +25,9 @@
                                 url: RouterService.loginRoutes("getUserInfo")
                             }).then(
                                 function (response) {
+																	debugger;
                                     if (app.propertyExists(response, "data.status") && response.data.status) {
+																		
                                         app.userData = response.data.data;
                                         deferred.resolve({status: true});
                                     } else {
