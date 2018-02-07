@@ -123,6 +123,21 @@
 					return;
 				};
 
+
+                $scope.$on("newFeed", function () {
+
+                    $http.get('http://localhost:3000/user-feeds')
+                        .then(function(feeds) {
+                            vm.feeds = feeds.data.feeds;
+                            debugger;
+                        })
+                        .catch(function(err) {
+                            console.log(err);
+                        });
+
+                });
+
+
 				function onSubmit(form) {
 					$scope.$broadcast('schemaFormValidate');
 						vm.showLoader = true;
@@ -144,6 +159,7 @@
 							console.log(response);
 							vm.hideEdit();
 							$rootScope.$broadcast('addedFeed');
+							$scope.$broadcast('newFeed');
 						}).catch(function(err) {
 							console.log(err);
 						});

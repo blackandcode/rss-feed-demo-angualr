@@ -19,8 +19,6 @@
                 <ul class="list-group">
                     <li class="list-group-item" ng-repeat="feed in vm.feeds"> {{feed.title}}
                         <span class="badge badge-secondary" > <a style="color:#FFF" ng-click="vm.showEdit(feed, 'PUT')" href="">Edit</a></span>
-
-
                         <span class="badge badge-danger" > <a style="color:#FFF" ng-click="vm.showEdit(feed, 'DELETE')" href="">Delete</a></span>
                     </li>
                 </ul>

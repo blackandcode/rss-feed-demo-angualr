@@ -16,26 +16,25 @@
         $scope.$emit("updateBreadcrumb");
         $scope.$on("$destroy", function () {
             $scope.$emit("updateBreadcrumb");
-				});
+		});
 
-				var vm = this;
+        var vm = this;
 
-
-				vm.moment = moment;
-				vm.feedTitle = $state.params.name;
-				vm.feeds = [];
-				var config = {
-					headers: {
-						'Content-Type': 'application/json'
-					}
-				};
-				$http.post('http://localhost:3000/feeds', {id: $state.params.id, url: $state.params.url}, config)
-				.then(function(feeds) {
-					vm.feeds = feeds.data.feeds;
-				})
-				.catch(function(err) {
-					console.log(err);
-				});
+        vm.moment = moment;
+        vm.feedTitle = $state.params.name;
+        vm.feeds = [];
+        var config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };debugger;
+        $http.post('http://localhost:3000/feeds', {id: $state.params.id, url: $state.params.url}, config)
+        .then(function(feeds) {
+            vm.feeds = feeds.data.feeds;
+        })
+        .catch(function(err) {
+            console.log(err);
+        });
     }
 
 })();
