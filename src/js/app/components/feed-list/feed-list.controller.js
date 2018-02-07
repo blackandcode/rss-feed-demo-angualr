@@ -28,7 +28,7 @@
                 'Content-Type': 'application/json'
             }
         };debugger;
-        $http.post('http://localhost:3000/feeds', {id: $state.params.id, url: $state.params.url}, config)
+        $http.post('http://localhost:3000/feeds', {groupId: $state.params.id, url: $state.params.url}, config)
         .then(function(feeds) {
             vm.feeds = feeds.data.feeds;
         })
